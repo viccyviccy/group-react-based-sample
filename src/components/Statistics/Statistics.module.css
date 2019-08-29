@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.stats_section {
+  display: flex;
+  margin: 20px 0;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  flex-flow: column;
+  justify-content: center;
+  width: 250px;
+  text-align: center;
+}
+
+.stat_list {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  list-style: none;
+}
+.li_stat {
+  display: flex;
+  flex-flow: column;
+  padding: 10px 5px;
+  width: 100%;
+  background-color: darkcyan;
+  color: white;
+  cursor: pointer;
+}
+
+.title_ma {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.label {
+  padding-bottom: 5px;
+  font-size: 12px;
+}

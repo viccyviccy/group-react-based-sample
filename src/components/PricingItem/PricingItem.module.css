@@ -1,0 +1,50 @@
+.pricing_item {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  width: 300px;
+  height: 450px;
+  /* border: 1px solid black; */
+  padding: 35px;
+  text-align: center;
+  background-color: white;
+  margin: 0 20px;
+}
+
+.icon {
+  width: 120px;
+  height: auto;
+  align-self: center;
+}
+
+.label {
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+
+.price {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 22px;
+  padding: 15px 0;
+}
+
+.button {
+  background-color: rgba(47, 79, 79, 0.459);
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 0;
+  width: 120px;
+  align-self: center;
+}
+.button:hover {
+  transform: scale(1.1, 1.1);
+  transition: transform 0.3s linear;
+  cursor: pointer;
+}
+
+.capacity {
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  color: darkgray;
+}
