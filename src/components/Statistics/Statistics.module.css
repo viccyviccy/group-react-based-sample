@@ -11,6 +11,7 @@
   justify-content: center;
   width: 250px;
   text-align: center;
+  padding: 0;
 }
 
 .stat_list {
@@ -18,15 +19,32 @@
   flex-flow: row;
   justify-content: space-between;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .li_stat {
   display: flex;
   flex-flow: column;
   padding: 10px 5px;
   width: 100%;
-  background-color: darkcyan;
   color: white;
   cursor: pointer;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.li_stat:nth-child(2n + 1) {
+  background-color: #6f256f75;
+}
+.li_stat:nth-child(2n + 2) {
+  background-color: #4030757e;
+}
+.li_stat:nth-child(2n + 3) {
+  background-color: #861a3181;
+}
+.li_stat:nth-child(2n + 4) {
+  background-color: #5977007c;
+}
+.li_stat:nth-child(2n + 5) {
+  background-color: #00503f85;
 }
 
 .title_ma {
@@ -34,6 +52,7 @@
   font-size: 16px;
   font-weight: 600;
   padding: 20px 0;
+  margin: 0;
 }
 
 .label {

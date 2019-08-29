@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import design from './Statistics.module.css';
 
 const Stats = ({ title, stats }) => (
@@ -15,19 +16,20 @@ const Stats = ({ title, stats }) => (
   </section>
 );
 
-export default Stats;
+Stats.defaultProps = {
+  title: 'Upload stats',
+};
 
-/*
-  <section className={design.stats_section}>
-    {items.map(item => (
-      <ul className={design.stat_list}>
-        <li className={design.li_item}>
-          <span className={design.label}>{item.lable}</span>
-          <span className={design.percentage}>{item.percent}</span>
-        </li>
-      </ul>
-    ))}
-  </section>;
-*/
+Stats.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }).isRequired,
+  ).isRequired,
+};
+
+export default Stats;
 
 // array of shape

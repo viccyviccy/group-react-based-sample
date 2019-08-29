@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import design from './PricingItem.module.css';
 
 const PricingItem = ({ el }) => {
@@ -14,7 +15,7 @@ const PricingItem = ({ el }) => {
 
   return (
     <li className={design.pricing_item}>
-      <img src={icon} className={design.icon} />
+      <img src={icon} alt={label} className={design.icon} />
       <h2 className={design.label} style={{ color }}>
         {label}
       </h2>
@@ -30,6 +31,20 @@ const PricingItem = ({ el }) => {
       </button>
     </li>
   );
+};
+
+// PricingItem.defaultProps = {
+
+// };
+
+PricingItem.propTypes = {
+  el: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    capacity: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default PricingItem;
