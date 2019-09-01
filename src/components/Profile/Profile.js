@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import design from './Profile.module.css';
 // module css to enter here
 
@@ -26,5 +27,19 @@ const Profile = ({ user }) => (
     </ul>
   </div>
 );
+
+Profile.propTypes = {
+  user: PropTypes.objectOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      tag: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }).isRequired,
+  ).isRequired,
+};
 
 export default Profile;

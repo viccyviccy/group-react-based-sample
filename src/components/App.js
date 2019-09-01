@@ -5,6 +5,7 @@ import pricingPlanItems from './PricingItem/pricing-plan.json';
 import PricingPlan from './PricingPlan/PricingPlan.js';
 import TransactionHistory from './Transactions/TransactionHistory.js';
 import transactions from './Transactions/transaction.json';
+import design from './App.module.css';
 
 const user = {
   name: 'Jacques Gluke',
@@ -28,7 +29,7 @@ const stats = [
 
 const App = () => {
   return (
-    <div>
+    <div className={design.main_div_app}>
       <Profile user={user} />
       <Stats title="Upload stats" stats={stats} />
       <PricingPlan items={pricingPlanItems} />
